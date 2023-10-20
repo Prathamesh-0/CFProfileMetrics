@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import { BsPersonCircle } from "react-icons/bs";
 import { BsFillPersonPlusFill } from "react-icons/bs";
@@ -16,18 +17,22 @@ function CollapsibleExample() {
       style={{ borderBottom: "2px solid #00FFFF" }}
     >
       <Container style={{ maxWidth: "1400px" }}>
-        <Navbar.Brand
-          href="/individual"
-          style={{ fontFamily: "'Cormorant SC', serif", color: "#00FFFF" }}
+        <Link
+          to="/individual"
+          style={{
+            fontFamily: "'Cormorant SC', serif",
+            color: "#00FFFF",
+            fontSize: "1.8rem",
+          }}
         >
           CF Profile Metrics
-        </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
-            <Nav.Link
-              href="/individual"
+            <Link
+              to="/individual"
               style={{
                 width: "130.03px",
                 fontSize: "18px",
@@ -37,9 +42,9 @@ function CollapsibleExample() {
             >
               {" "}
               <BsPersonCircle style={{ marginRight: "4px" }} /> Individual
-            </Nav.Link>
-            <Nav.Link
-              href="/compare"
+            </Link>
+            <Link
+              to="/compare"
               style={{
                 width: "115.86",
                 fontSize: "18px",
@@ -50,9 +55,9 @@ function CollapsibleExample() {
               {" "}
               <BsFillPersonPlusFill style={{ marginRight: "4px" }} />
               Compare
-            </Nav.Link>
-            <Nav.Link
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               style={{
                 width: "132.65px",
                 fontSize: "18px",
@@ -60,9 +65,10 @@ function CollapsibleExample() {
                 color: "#00FFFF",
               }}
             >
-              <IoIosMail style={{ marginRight: "4px" }} />
+              {" "}
+              <IoIosMail style={{ marginRight: "4px", marginLeft: "7px" }} />
               Contact Us
-            </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
