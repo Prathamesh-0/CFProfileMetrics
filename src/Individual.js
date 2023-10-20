@@ -199,7 +199,7 @@ export default function Individual() {
           </InputContainer>
           <ErrorText>{!exist && "User does not exist"}</ErrorText>
           <ButtonContainer>
-            <Button content="Submit" />
+            <Button onSubmit={onSubmit} content="Submit" />
           </ButtonContainer>
         </MainContainer>
       </form>
